@@ -1,5 +1,6 @@
 //var row1 = document.getElementById("9am")
-
+//this user input var need to = textel.value
+userInput = localStorage.getItem("9")
 var currentTime = new Date().getHours();
 console.log(currentTime)
 // var currentHour = document.getElementById(currentTime)
@@ -19,6 +20,15 @@ document.getElementById("11").getElementsByClassName("saveBtn")[0].addEventListe
     console.log("hi")
 });
 //console.log(document.getElementById("11").getElementsByClassName("saveBtn")[0])
+// document.getElementById("9").getElementsByClassName("saveBtn")[0].addEventListener("click", function(){
+//     localStorage.setItem("9", "saveBtn")
+// })
+var textEl = document.getElementById("text-9")
+console.log(textEl)
+
 document.getElementById("9").getElementsByClassName("saveBtn")[0].addEventListener("click", function(){
-    localStorage.setItem("9", "saveBtn")
+    var userInput = textEl.value
+    console.log(userInput)
+    localStorage.setItem("9", userInput)
+
 })
