@@ -18,5 +18,7 @@ for (var i = 9; i <= 17; i++) {
 document.getElementById("11").getElementsByClassName("saveBtn")[0].addEventListener("click", function(){
     console.log("hi")
 });
-console.log(document.getElementById("11").getElementsByClassName("saveBtn")[0])
-
+//console.log(document.getElementById("11").getElementsByClassName("saveBtn")[0])
+document.getElementById("9").getElementsByClassName("saveBtn")[0].addEventListener("click", function(){
+    localStorage.setItem("9", "saveBtn")
+})
