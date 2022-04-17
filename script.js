@@ -23,12 +23,49 @@ document.getElementById("11").getElementsByClassName("saveBtn")[0].addEventListe
 // document.getElementById("9").getElementsByClassName("saveBtn")[0].addEventListener("click", function(){
 //     localStorage.setItem("9", "saveBtn")
 // })
-var textEl = document.getElementById("text-9")
-console.log(textEl)
+ var textEl = document.getElementById("text-9")
+ console.log(textEl)
 
-document.getElementById("9").getElementsByClassName("saveBtn")[0].addEventListener("click", function(){
-    var userInput = textEl.value
-    console.log(userInput)
-    localStorage.setItem("9", userInput)
+ document.getElementById("9").getElementsByClassName("saveBtn")[0].addEventListener("click", function(){
+     var userInput = textEl.value
+     console.log(userInput)
+     localStorage.setItem("9", userInput)
 
-})
+ })
+
+searchHistory = localStorage.getItem("9");
+textEl9 = document.getElementById("text-9");
+textEl9.value = searchHistory;
+
+searchhistory = localStorage.getItem("10");
+textEl10 = document.getElementById("text-10");
+textEl10.value = searchHistory
+
+searchhistory = localStorage.getItem("11");
+textEl10 = document.getElementById("text-11");
+textEl10.value = searchHistory
+
+searchhistory = localStorage.getItem("12");
+textEl10 = document.getElementById("text-12");
+textEl10.value = searchHistory
+
+searchhistory = localStorage.getItem("13");
+textEl10 = document.getElementById("text-13");
+textEl10.value = searchHistory
+
+searchhistory = localStorage.getItem("14");
+textEl10 = document.getElementById("text-14");
+textEl10.value = searchHistory
+
+searchhistory = localStorage.getItem("15");
+textEl10 = document.getElementById("text-15");
+textEl10.value = searchHistory
+
+searchhistory = localStorage.getItem("16");
+textEl10 = document.getElementById("text-16");
+textEl10.value = searchHistory
+
+searchhistory = localStorage.getItem("17");
+textEl10 = document.getElementById("text-17");
+textEl10.value = searchHistory
+
