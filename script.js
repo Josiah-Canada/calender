@@ -1,10 +1,7 @@
-//var row1 = document.getElementById("9am")
-//this user input var need to = textel.value
 userInput = localStorage.getItem("9")
 var currentTime = new Date().getHours();
 console.log(currentTime)
-// var currentHour = document.getElementById(currentTime)
-// currentHour.setAttribute("class", "row time-block present")
+
 
 for (var i = 9; i <= 17; i++) {
     var currentHour = document.getElementById(i)
@@ -19,53 +16,55 @@ for (var i = 9; i <= 17; i++) {
 document.getElementById("11").getElementsByClassName("saveBtn")[0].addEventListener("click", function(){
     console.log("hi")
 });
-//console.log(document.getElementById("11").getElementsByClassName("saveBtn")[0])
-// document.getElementById("9").getElementsByClassName("saveBtn")[0].addEventListener("click", function(){
-//     localStorage.setItem("9", "saveBtn")
-// })
- var textEl = document.getElementById("text-9")
+
+var buttons =document.getElementsByClassName("saveBtn")
+console.log(buttons)
+Array.from(buttons).forEach(element => {
+    element.addEventListener("click", function(event){
+        var elementId = event.target.id.split("-")[1]
+        var textEl = document.getElementById("text-" + elementId)
  console.log(textEl)
-
- document.getElementById("9").getElementsByClassName("saveBtn")[0].addEventListener("click", function(){
-     var userInput = textEl.value
-     console.log(userInput)
-     localStorage.setItem("9", userInput)
-
- })
+        var userInput = textEl.value 
+        var storageKey = textEl.id.split("-")[1]
+        console.log(userInput) 
+        localStorage.setItem(storageKey, userInput)
+        console.log(event.target.id.split("-"))
+    })
+});
 
 searchHistory = localStorage.getItem("9");
 textEl9 = document.getElementById("text-9");
 textEl9.value = searchHistory;
 
-searchhistory = localStorage.getItem("10");
+searchHistory = localStorage.getItem("10");
 textEl10 = document.getElementById("text-10");
 textEl10.value = searchHistory
 
-searchhistory = localStorage.getItem("11");
+searchHistory = localStorage.getItem("11");
 textEl10 = document.getElementById("text-11");
 textEl10.value = searchHistory
 
-searchhistory = localStorage.getItem("12");
+searchHistory = localStorage.getItem("12");
 textEl10 = document.getElementById("text-12");
 textEl10.value = searchHistory
 
-searchhistory = localStorage.getItem("13");
+searchHistory = localStorage.getItem("13");
 textEl10 = document.getElementById("text-13");
 textEl10.value = searchHistory
 
-searchhistory = localStorage.getItem("14");
+searchHistory = localStorage.getItem("14");
 textEl10 = document.getElementById("text-14");
 textEl10.value = searchHistory
 
-searchhistory = localStorage.getItem("15");
+searchHistory = localStorage.getItem("15");
 textEl10 = document.getElementById("text-15");
 textEl10.value = searchHistory
 
-searchhistory = localStorage.getItem("16");
+searchHistory = localStorage.getItem("16");
 textEl10 = document.getElementById("text-16");
 textEl10.value = searchHistory
 
-searchhistory = localStorage.getItem("17");
+searchHistory = localStorage.getItem("17");
 textEl10 = document.getElementById("text-17");
 textEl10.value = searchHistory
 
